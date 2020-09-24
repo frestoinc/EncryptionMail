@@ -1,0 +1,128 @@
+<!--
+  ~
+  ~ /*
+  ~  * Copyright (C) 2006 The Android Open Source Project
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  *      http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  */
+  -->
+
+<resources>
+    <string name="app_name">MailDemo</string>
+    <string name="subject">Subject</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_field_required">This field is required</string>
+
+    <string name="useremail">Email</string>
+    <string name="userpassword">Password</string>
+    <string name="ok">OK</string>
+    <string name="sign_in">Sign In</string>
+    <string name="webmailserver">Mail Server (https://…)</string>
+    <string name="display_name">Display Name</string>
+
+    <string name="ldap_url">URL</string>
+    <string name="ldap_domain">DC (dc=)</string>
+    <string name="ldap_title">LDAP Settings</string>
+    <string name="ldap_port">Port</string>
+    <string name="ldap_test">Test Connection</string>
+
+    <string name="s_mime_info">S/Mime Info</string>
+    <string name="password">Password</string>
+    <string name="unclassified">Unclassified</string>
+    <string name="restricted">Restricted</string>
+    <string name="confidential">Confidential</string>
+    <string name="secret">Secret</string>
+    <string name="reply">Reply</string>
+    <string name="replyall">Reply All</string>
+    <string name="forward">Forward</string>
+    <string name="edit">Edit</string>
+
+    <string name="sent_from_android_test_app">\n\n<b><i><u>Sent From Android Test App</u></i></b></string>
+    <string name="to">To:</string>
+    <string name="cc_bcc">Cc:</string>
+
+    <string name="testtext">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="toggle_earlier_message">Toggle Earlier Message</string>
+    <string name="android_secure_email_demo">Android Secure Email Demo</string>
+    <string name="set_ldap_url">Set LDAP URL</string>
+    <string name="enter_certificate_password">Enter Certificate Password</string>
+    <string name="inbox">Inbox</string>
+    <string name="folders">Folders</string>
+    <string name="sent">Sent</string>
+    <string name="test_card">Test Card</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="normal">Normal</string>
+    <string name="sign_and_encrypt_rsa">Sign And Encrypt (RSA)</string>
+    <string name="sign_and_encrypt_ecc">Sign And Encrypt (ECC</string>
+    <string name="ldap_error">User Certificate not found</string>
+
+    <string name="full_sync">Full-Sync</string>
+
+    <string name="authenticator">mail.tech.fullmaildemo.exchange</string>
+    <string name="sync_adapter">"mail.tech.fullmaildemo.contentAuthority"</string>
+    <string name="no_messages_found">No messages found</string>
+    <string name="no_accounts_found">No accounts found</string>
+    <string name="no_recipients_found">No Recipients Found!</string>
+    <string name="address_book">Address Book</string>
+    <string name="name_email">Name/Email</string>
+    <string name="new_contacts">New Contacts</string>
+    <string name="add">add</string>
+    <string name="recipient_list">Recipient List</string>
+    <string name="skip">skip</string>
+    <string name="search_hint">search</string>
+    <string name="outlook_server">https://outlook.office365.com</string>
+    <string name="on_premise_account">On Premise Account</string>
+    <string name="login">Login</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="contacts">Contacts</string>
+    <string name="undo">Undo</string>
+    <string name="edit_contact">Edit Contact</string>
+    <string name="from">From:</string>
+    <string name="crypto">Crypto:</string>
+    <string name="unencrypted">Unencrypted</string>
+    <string name="encrypted">Encrypted</string>
+    <string name="me">me</string>
+    <string name="date">Date</string>
+
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="classification">Class:</string>
+    <string name="resync">Re-Sync</string>
+    <string name="cancel">cancel</string>
+    <string name="proceed">proceed</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="try_again">try again</string>
+    <string name="loading">Loading...</string>
+    <string name="no_network">Oops.\nNo network detected!</string>
+
+</resources>

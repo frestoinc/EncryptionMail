@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~
+  ~ /*
+  ~  * Copyright (C) 2006 The Android Open Source Project
+  ~  *
+  ~  * Licensed under the Apache License, Version 2.0 (the "License");
+  ~  * you may not use this file except in compliance with the License.
+  ~  * You may obtain a copy of the License at
+  ~  *
+  ~  *      http://www.apache.org/licenses/LICENSE-2.0
+  ~  *
+  ~  * Unless required by applicable law or agreed to in writing, software
+  ~  * distributed under the License is distributed on an "AS IS" BASIS,
+  ~  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~  * See the License for the specific language governing permissions and
+  ~  * limitations under the License.
+  ~  */
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:elevation="16dp">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.core.widget.NestedScrollView
+                        android:id="@+id/vSv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="?attr/actionBarSize"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/white"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/vSubject"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="20sp"
+                                app:layout_constraintBottom_toTopOf="@+id/vContent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/vContent"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/white"
+                                android:padding="4dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/vSubject">
+
+                                <ImageView
+                                    android:id="@+id/vImage"
+                                    android:layout_width="35dp"
+                                    android:layout_height="35dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:contentDescription="@null"
+                                    android:src="@drawable/circle"
+                                    app:layout_constraintBottom_toTopOf="@+id/vAttach"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/vTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/lock_color"
+                                    android:textSize="12sp"
+                                    app:layout_constraintBottom_toTopOf="@+id/vRecipient"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/vImage" />
+
+                                <TextView
+                                    android:id="@+id/vImgText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAllCaps="true"
+                                    app:layout_constraintBottom_toBottomOf="@+id/vImage"
+                                    app:layout_constraintEnd_toEndOf="@+id/vImage"
+                                    app:layout_constraintStart_toStartOf="@+id/vImage"
+                                    app:layout_constraintTop_toTopOf="@+id/vImage" />
+
+                                <TextView
+                                    android:id="@+id/vSender"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@android:color/black"
+                                    app:layout_constrainedWidth="true"
+                                    app:layout_constraintBottom_toTopOf="@+id/vRecipient"
+                                    app:layout_constraintEnd_toStartOf="@+id/vTime"
+                                    app:layout_constraintStart_toEndOf="@+id/vImage"
+                                    app:layout_constraintTop_toTopOf="@+id/vImage" />
+
+                                <TextView
+                                    android:id="@+id/vRecipient"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_marginEnd="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:drawableEnd="@drawable/ic_expand_more_24dp"
+                                    android:ellipsize="end"
+                                    android:maxLines="1"
+                                    android:textColor="@color/blue_grey"
+                                    app:layout_constraintBottom_toBottomOf="@+id/vImage"
+                                    app:layout_constraintStart_toEndOf="@+id/vImage"
+                                    app:layout_constraintTop_toBottomOf="@+id/vSender" />
+
+                                <TextView
+                                    android:id="@+id/vMsg"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:textColor="@android:color/black"
+                                    app:layout_constraintBottom_toTopOf="@+id/vAttach"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/vAttach" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/vAttach"
+                                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:background="@drawable/whiteroundedborderbg"
+                                    android:ellipsize="middle"
+                                    android:maxWidth="120dp"
+                                    android:maxHeight="45dp"
+                                    android:singleLine="true"
+                                    android:textColor="@android:color/black"
+                                    android:theme="@style/AppTheme.AttachmentButton"
+                                    android:visibility="gone"
+                                    app:icon="@drawable/ic_attach_file_black_24dp"
+                                    app:iconGravity="textStart"
+                                    app:iconPadding="0dp"
+                                    app:iconTint="@android:color/black"
+                                    app:layout_constraintBottom_toTopOf="@+id/vMsg"
+                                    app:layout_constraintStart_toStartOf="@id/vImgText"
+                                    app:layout_constraintTop_toBottomOf="@+id/vImage"
+                                    app:strokeColor="@color/lock_color" />
+
+                                <include
+                                    android:id="@+id/vExpandable"
+                                    layout="@layout/viewer_expandable_layout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toTopOf="@+id/vAttach"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/vRecipient" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:id="@+id/vBottomBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/lock_color"
+                    app:elevation="8dp"
+                    app:itemIconTint="@android:color/white"
+                    app:itemTextColor="@android:color/white"
+                    app:labelVisibilityMode="labeled"
+                    app:menu="@menu/menu_bottombar" />
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+        <com.frestoinc.maildemo.view.ContentLoadingFrameLayout
+            android:id="@+id/loadingContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:textLoading="Authenticating..." />
+    </FrameLayout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="msgViewModel"
+            type="com.frestoinc.maildemo.ui.sharedviewmodel.MessageViewModel" />
+
+    </data>
+</layout>

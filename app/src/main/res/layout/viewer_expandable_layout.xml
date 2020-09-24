@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.frestoinc.maildemo.view.ExpandableLayout
+        android:id="@+id/vExpandable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:el_expanded="true"
+        app:el_parallax="0.5">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="8dp"
+            app:strokeColor="@color/blue_grey"
+            app:strokeWidth="1dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp">
+
+                <TextView
+                    android:id="@+id/vExSenderSubj"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/from"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/vExSenderCont"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/vExSenderCont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/vExRecipientSubj"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vExSenderSubj"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/vExRecipientSubj"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/to"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/vExRecipientCont"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vExSenderCont" />
+
+                <TextView
+                    android:id="@+id/vExRecipientCont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/vExTimeCont"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vExRecipientSubj"
+                    app:layout_constraintTop_toBottomOf="@+id/vExSenderCont" />
+
+                <TextView
+                    android:id="@+id/vExTimeSubj"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/vExTimeCont"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vExRecipientCont" />
+
+                <TextView
+                    android:id="@+id/vExTimeCont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/vExCryptoCont"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vExTimeSubj"
+                    app:layout_constraintTop_toBottomOf="@+id/vExRecipientCont" />
+
+                <TextView
+                    android:id="@+id/vExCryptoSubj"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/crypto"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/vExCryptoCont"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vExTimeCont" />
+
+                <TextView
+                    android:id="@+id/vExCryptoCont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/vExClassCont"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vExCryptoSubj"
+                    app:layout_constraintTop_toBottomOf="@+id/vExTimeCont" />
+
+                <TextView
+                    android:id="@+id/vExClassSubj"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/classification"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintEnd_toStartOf="@+id/vExClassCont"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vExCryptoCont" />
+
+                <TextView
+                    android:id="@+id/vExClassCont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/vExAttr"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/vExClassSubj"
+                    app:layout_constraintTop_toBottomOf="@+id/vExCryptoCont" />
+
+                <TextView
+                    android:id="@+id/vExAttr"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/vExClassCont" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </com.frestoinc.maildemo.view.ExpandableLayout>
+</layout>

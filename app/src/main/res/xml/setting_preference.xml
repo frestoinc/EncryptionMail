@@ -1,0 +1,92 @@
+<!--
+  ~ Copyright 2018 The android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by androidlicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:title="Encryption Setting"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:entries="@array/default_encryption"
+            android:entryValues="@array/default_encryption"
+            android:key="encryptionType"
+            android:title="Default Encryption Type"
+            app:defaultValue="Normal"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="algoType"
+            android:summaryOff="Use RSA Cryptographic Operation"
+            android:summaryOn="Use ECC Cryptographic Operation"
+            android:title="Default Cryptographic Operation"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Classification Setting"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:entries="@array/default_classification"
+            android:entryValues="@array/default_classification"
+            android:key="classificationType"
+            android:title="Default Classification Type"
+            app:defaultValue="Unclassified"
+            app:iconSpaceReserved="false"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About"
+        app:iconSpaceReserved="false">
+
+        <androidx.preference.Preference
+            android:summary="This app showcases the integration of a mail client to send an encrypted email by interfacing with a smartcard through NFC interface"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:summary="@string/app_version"
+            android:title="Version"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:summary="Got any queries? We are here to help!"
+            android:title="Send Feedback"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:summary="View frequently asked questions"
+            android:title="FAQ"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:title="Privacy Policy"
+            app:iconSpaceReserved="false" />
+
+        <androidx.preference.Preference
+            android:title="Terms &amp; Conditions"
+            app:iconSpaceReserved="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

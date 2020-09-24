@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fragAuthCl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/fragAuthBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_button_rounded"
+            android:enabled="false"
+            android:text="@string/login"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fragAuthll" />
+
+        <LinearLayout
+            android:id="@+id/fragAuthll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/onPremBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layoutDirection="rtl"
+                android:text="@string/on_premise_account"
+                android:textColor="@color/lock_color"
+                android:textSize="18sp"
+                app:buttonTint="@color/lock_color"
+                app:layout_constrainedWidth="true" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragAuthPwdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/userpassword"
+                android:textColorHint="@color/lock_color"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/lock_color">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fragAuthPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/lock_color"
+                    app:backgroundTint="@color/lock_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragAuthWebServerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/webmailserver"
+                android:textColorHint="@color/lock_color">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fragAuthWebServer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:inputType="textUri"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/lock_color"
+                    app:backgroundTint="@color/lock_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/fragAuthEmailLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/useremail"
+                android:textColorHint="@color/lock_color">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/fragAuthEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:paddingBottom="5dp"
+                    android:textColor="@color/lock_color"
+                    app:backgroundTint="@color/lock_color" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/fragAuthHeader"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="bottom"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/lock_color"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/fragAuthll"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <data>
+
+        <variable
+            name="authViewModel"
+            type="com.frestoinc.maildemo.ui.sharedviewmodel.AccountViewModel" />
+    </data>
+</layout>
