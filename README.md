@@ -10,25 +10,25 @@ This simple app uses Exchange ActiveSync Protocol for email client/messaging. Th
 -EAS sends email
 
 ## Reading: 
--unpacked .p7m to encryptedData
--decrypt with your private ECC/RSA private key
--verify signedData
--message formatted to plain text
+- unpacked .p7m to encryptedData
+- decrypt with your private ECC/RSA private key
+- verify signedData
+- message formatted to plain text
 
 ## Tech Stack:
--Exchange ActiveSync Protocol
--Custom Bouncy Castle ECC and RSA signing and encryption
--Custom S/MIME mail
--UnboundId Ldap
--JSoup
+- Exchange ActiveSync Protocol
+- Custom Bouncy Castle ECC and RSA signing and encryption
+- Custom S/MIME mail
+- UnboundId Ldap
+- JSoup
 
 ## Android Tech Stack:
--MVVM
--AndroidX Jetpack
--Dagger2
--RxJava
--LiveData
--Room
--Retrofit/OkHttp3
--Glide
--Security Crypto
+- MVVM
+- AndroidX Jetpack
+- Dagger2
+- RxJava
+- LiveData
+- Room
+- Retrofit/OkHttp3
+- Glide
+- Security Crypto
